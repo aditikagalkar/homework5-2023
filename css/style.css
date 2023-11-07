@@ -1,0 +1,117 @@
+@import url("https://fonts.googleapis.com/css?family=Poppins");
+
+#logo {
+    animation: grow 5s;
+}
+header {
+    display: flex;
+    justify-items: center;
+    flex-direction: column;
+    align-items: center;
+}
+body {
+    background-image: url("/images/concrete_seamless.png");
+    background-color: #f1f1f1;
+    font-family: "Poppins", serif;
+}
+.nav_links {
+    display: flex;
+    flex-direction: column;
+}
+/* #5
+ .nav_links href:any-link{
+    color
+} */
+.card {
+    display: flex;
+    flex-direction: column;
+    flex-basis: 450px;
+}
+
+.card > header {
+    background: #288088;
+    border: solid 2px #45adad;
+    padding: 20px 0px;
+    border-radius: 50px 50px 0 0;
+}
+
+.pricing {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+/* # 10
+.gallery{
+    display: flex;
+} */
+.gallery img {
+    border: solid 10px #50c7c7;
+    margin: 10px;
+    width: 300px;
+}
+
+@keyframes grow {
+    from {
+        width: 25px;
+        opacity: 0;
+    }
+    to {
+        width: 475;
+        opacity: 1;
+    }
+}
+
+@media screen and (min-width: 900px) {
+    header {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    body > header {
+        z-index: 1;
+        position: fixed;
+        width: 100%;
+    }
+    header .nav_links {
+        display: flex;
+        flex-direction: row;
+    }
+    body > main {
+        padding-top: 100px;
+    }
+    .pricing {
+        text-align: right;
+    }
+    .card {
+        display: flex;
+        flex-direction: column;
+        flex-basis: 275px;
+        text-align: start;
+    }
+ 
+}
+
+@media (prefers-reduced-motion) {
+    #logo {
+        animation: none;
+    }
+}
+
+@media (orientation: portrait) {
+    body {
+        font-family: Arial, Helvetica;
+        background-image: none;
+    }
+    .pricing {
+        align-items: flex-end;
+    }
+    .card{
+        display: flex;
+        border: solid 2px #45ADDD;
+        flex-basis: 325px;
+    }
+    #gallery, .gallery{
+        display: none;
+    }
+}
+
